@@ -1,9 +1,9 @@
-from config import app,client
+from config import s3app,client
 from flask import request
 
-@app.route('/upload-image',methods=['POST'])
+@s3app.route('/upload-image',methods=['POST'])
 def upload_image():
-    bucket='fresherbatch343'
+    bucket='training-phani'
     content_type=request.mimetype
     obj=request.files['file']
     filename=obj.filename
@@ -15,7 +15,7 @@ def upload_image():
 
     return {'message': 'file uploaded'}, 200
 
-@app.route("/download-file/<string:filename>",methods=["GET"])
+@s3app.route("/download-file/<string:filename>",methods=["GET"])
 def getFileToDownload(filename):
-      client.download_file('fresherbatch343',filename,"e:\\new-downloads\\"+filename)
+      client.download_file('training-phani',filename,"D:\aws training"+filename)
       return {"message ": "check the download folder"}, 200
