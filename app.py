@@ -1,13 +1,14 @@
 from config import s3app
 #from flask import Flask
 
+
 from config import app
 import routes
 
-import routes
+#import routes
 
-if __name__=="__main__":
-    s3app.run(debug=True,host="0.0.0.0")
+#f __name__=="__main__":
+    #s3app.run(debug=True,host="0.0.0.0")
 
 
 
@@ -16,4 +17,4 @@ def greet():
     return "Hello Flask app is running!!!"
 
 if __name__=="__main__":
-    app.run(debug=True,host="0.0.0.0")
+    s3app.run(debug=True,host="0.0.0.0")

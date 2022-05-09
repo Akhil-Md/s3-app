@@ -4,11 +4,11 @@ WORKDIR /app
 # We copy just the requirements.txt first to leverage Docker cache
 COPY ./requirements.txt .
 
-ENV DB_URL=mysql://admin:phani_26@database-1.cszbnynw9m8q.ap-northeast-1.rds.amazonaws.com/aws
+ENV mysql://admin:Akheel123@mysqldb-1.cvbnn80snkif.ap-south-1.rds.amazonaws.com/aws
 
-ENV ACCESS_KEY=AKIA4MC6LBIEAAONRTBF
+ENV ACCESS_KEY=AKIA2TCWO3UYUBVOAV7V
 
-ENV SECRET_KEY=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
+ENV SECRET_KEY=FJPi34xdrgdDMIM1Z7eF+tjVYnREl8SqohZFPrRj
 #this runs when image is built
 RUN pip install -r requirements.txt
 
